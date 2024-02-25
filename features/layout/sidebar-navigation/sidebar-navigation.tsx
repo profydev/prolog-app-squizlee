@@ -26,6 +26,7 @@ export function SidebarNavigation() {
     const subject = "Support Request:";
     window.location.href = `mailto:${supportEmail}?subject=${subject}`;
   }
+  console.log("sidebar collapsed", isSidebarCollapsed);
 
   return (
     <div
@@ -44,7 +45,7 @@ export function SidebarNavigation() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={
-              isSidebarCollapsed
+              isSidebarCollapsed && !isMobileMenuOpen
                 ? "/icons/logo-small.svg"
                 : "/icons/logo-large.svg"
             }
