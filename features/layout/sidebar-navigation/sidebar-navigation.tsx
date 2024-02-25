@@ -26,7 +26,6 @@ export function SidebarNavigation() {
     const subject = "Support Request:";
     window.location.href = `mailto:${supportEmail}?subject=${subject}`;
   }
-  console.log("sidebar collapsed", isSidebarCollapsed);
 
   return (
     <div
