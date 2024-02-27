@@ -1,5 +1,10 @@
 import styles from "./footer.module.scss";
-export function Footer() {
+
+type Props = {
+  version: string;
+};
+
+export function Footer({ version }: Props) {
   const links = [
     { name: "Docs", href: "#" },
     { name: "API", href: "#" },
@@ -9,7 +14,7 @@ export function Footer() {
 
   return (
     <div className={styles.footer}>
-      <div className={styles.version}>Version: 0.5.1</div>
+      <div className={styles.version}>Version: {version}</div>
       <div className={styles.links}>
         {links.map((link) => (
           <a key={link.name} href={link.href}>
