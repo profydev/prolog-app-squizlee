@@ -50,6 +50,10 @@ describe("Issue List", () => {
         });
     });
 
+    it("displays the Footer", () => {
+      cy.assertFooterDisplayed();
+    });
+
     it("paginates the data", () => {
       // test first page
       cy.contains("Page 1 of 3");
