@@ -13,7 +13,7 @@ export function Footer({ version }: Props) {
   ];
 
   return (
-    <div className={styles.footer}>
+    <div id="footer" className={styles.footer}>
       <div className={styles.version}>Version: {version}</div>
       <div className={styles.links}>
         {links.map((link) => (

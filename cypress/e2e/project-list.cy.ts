@@ -27,6 +27,10 @@ describe("Project List", () => {
       cy.viewport(1025, 900);
     });
 
+    it("displays the Footer", () => {
+      cy.assertFooterDisplayed();
+    });
+
     it("renders the projects", () => {
       const languageNames = ["React", "Node.js", "Python"];
 
